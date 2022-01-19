@@ -1,0 +1,35 @@
+@import "variables";
+body {
+  height: 100vh;
+  font-weight: 400;
+}
+/* ============= VUE BOOTSTRAP OVERRIDES ============= */
+
+/* Anchor tag */
+.router-link-active {
+  color: $nav-tabs-link-active-color;
+  background-color: $nav-tabs-link-active-bg;
+  border-color: $nav-tabs-link-active-border-color;
+}
+.navbar-nav {
+  .router-link-active {
+    color: $navbar-light-active-color;
+  }
+  &.navbar-dark {
+    .router-link-active {
+      color: $navbar-dark-active-color;
+    }
+  }
+}
+.navbar-dark {
+  .router-link-active {
+    color: $navbar-dark-active-color;
+  }
+}
+/* Pills */
+.nav-pills {
+  .router-link-active {
+    color: $nav-pills-link-active-color;
+    background-color: $nav-pills-link-active-bg;
+  }
+}
