@@ -6,7 +6,7 @@ MACHINE="Failed OS inspection"
 FULL_PATH=$(realpath $0)
 TEMP_PATH=$(dirname $FULL_PATH)
 DIR_PATH=/C${TEMP_PATH:2}
-SUBJ="//SKIP=y/C=US/ST=CA/L=SD/O=Vanilla/OU=Vanilla/CN=Vanilla/FN=Vanilla/emailAddress=gregorybown@gmail.com"
+SUBJ="//SKIP=y/C=US/ST=CA/L=SD/O=Vanilla/OU=Vanilla/CN=Vanilla/FN=Vanilla/emailAddress=username@gmail.com"
 
 ## Check for OS
 function check_os {

@@ -48,29 +48,6 @@ function clean_up_files {
     rm ./vault/public/*;
 }
 
-function clean_up_docker {
-    docker stop $(docker ps -a -q)
-    ##
-    if [ $(docker ps -a -q --filter="name=lotro") ];
-        then
-            echo -e "Found lotro docker container\nCleaning up..."
-            docker container rm lotro
-            docker volume rm lotro-themes lotro-sites lotro-profiles lotro-modules lotro-sites-local lotro-assets
-            ## docker volume rm $(docker volume ls -qf dangling=true)
-        else
-            echo "lotro docker container not found"
-    fi
-
-    if [[ "$(docker images -q kubernetes_lotro:latest)" ]];
-        then
-            echo -e "Found lotro docker image\nCleaning up..."
-            docker rmi $(docker images -q kubernetes_lotro:latest)
-        else
-            echo "lotro docker image not found"
-    fi
-}
-
 check_os
-clean_up_docker
 check_root_ca_exists
 ## delete_existing_root_ca
