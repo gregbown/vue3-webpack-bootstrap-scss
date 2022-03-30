@@ -5,22 +5,27 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
 ### Compiles and minifies for production
 ```
-npm run build
+npm run webpack:build
 ```
 
-### Run your unit tests
+### Run mock production server
+```
+npm run static
+```
+
+### Run webpack dev server
+```
+npm run webpack:serve
+```
+
+### Run your unit tests. Note: some tests will fail due to inline templates
 ```
 npm run test:unit
 ```
 
-### Run your end-to-end tests
+### Run your end-to-end tests. Note: some tests will fail due to inline templates
 ```
 npm run test:e2e
 ```

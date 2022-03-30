@@ -5,7 +5,12 @@ node_modules
 /tests/e2e/videos/
 /tests/e2e/screenshots/
 
-/vault
+/vault/csr/*.csr
+/vault/private/*.pem
+/vault/private/*.key
+/vault/public/*.pem
+/vault/public/*.srl
+/vault/public/*.crt
 # local env files
 .env.local
 .env.*.local
